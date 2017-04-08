@@ -12,12 +12,13 @@ We have created a basic mail generator script for you that will load a handful o
 You will need the following tools to complete this challenge
 
 * A personal GitHub account
-* [Sublime Text 2 ](http://www.sublimetext.com/2)
+* [Sublime Text 3 ](http://www.sublimetext.com/3)
 * [Git](https://help.github.com/articles/set-up-git#platform-all)
 
 ## Objectives
 
 1. Fork this repository to your own GitHub profile and clone to your local machine.
+ * [How to Fork A Repository](https://help.github.com/articles/fork-a-repo/)
 
 2. Create a basic page layout via HTML/CSS with a top header section with the name of the application and a content section where you will display the messages.
 
@@ -36,11 +37,11 @@ You will need the following tools to complete this challenge
 
 5. You must show an inbox count somewhere on the page to show the current number of messages in your inbox.
 
-6. Set a recurring function to via the JavaScript `setTimeout` function that will call a `getNewMessage` function that we have created for you that will return a newly created message with the same properties as your previous messages.
+6. Set a recurring function to via the JavaScript `setInterval` function that will call our existing `getNewMessage` function that we have created for you that will return a newly created message with the same properties as your previous messages.
 
 6. All CSS styles should be created in the `css\style.css` file included in the project. 
 
-7. All JavaScript should be created in the `<head>` element in your included `index.html` file.
+7. All JavaScript should be created in the `<head>` element in your included `index.html` file inside of the window.onload function already created in the `<head>` section.
 
 8. Commit your code often and when you are completed send us a pull request from your repository so that we may review your code.
 
