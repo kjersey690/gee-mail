@@ -25,30 +25,32 @@
 	<table class="table table-bordered table-striped table-hover">
 	<thead>
 	<tr>
-		<th>Date</th>
-		<th>Subject</th>
-		<th>Sender</th>
+	<center><th>Date</th></center>
+	<center><th>Subject</th></center>
+	<center><th>Sender</th></center>
 	</tr>
 	</thead>
 	<tbody></tbody>
 	</table>
 	</div>
+	<p id="demo">Subject Message</p>
+	<center>
     <script>
-
+document.write(loadGeemails());
+};
    
-	document.write(geemails[0]['date']+ ""+  geemails[0]['subject']+ " "+" "+  geemails[0]['sender']+"<br />");
-	document.write(geemails[1]['date']+ "    "+  geemails[1]['subject']+ " "+" "+  geemails[1]['sender']+"<br />");
-	document.write(geemails[2]['date']+ "    "+  geemails[2]['subject']+ " "+" "+  geemails[2]['sender']+"<br />");
-	document.write(geemails[3]['date']+ "    "+  geemails[3]['subject']+ " "+  geemails[3]['sender']+"<br />");
-	document.write(geemails[4]['date']+ "    "+  geemails[4]['subject']+ " "+  geemails[4]['sender']+"<br />");
-	document.write(geemails[5]['date']+ "    "+  geemails[5]['subject']+ " "+  geemails[5]['sender']+"<br />");
-	document.write(geemails[6]['date']+ "    "+  geemails[6]['subject']+ " "+  geemails[6]['sender']+"<br />");
-	document.write(geemails[7]['date']+ "    "+  geemails[7]['subject']+ " "+  geemails[7]['sender']+"<br />");
-	document.write(geemails[8]['date']+ "    "+  geemails[8]['subject']+ " "+  geemails[8]['sender']+"<br />");
-	document.write(geemails[9]['date']+ "    "+  geemails[9]['subject']+ " "+  geemails[9]['sender']+"<br />");
+	document.write(geemails[0]['date']+ " "+  geemails[0]['subject']+ " "+  geemails[0]['sender']+"<br />");
+	document.write(geemails[1]['date']+ " "+  geemails[1]['subject']+ " "+  geemails[1]['sender']+"<br />");
+	document.write(geemails[2]['date']+ " "+  geemails[2]['subject']+ " "+  geemails[2]['sender']+"<br />");
+	document.write(geemails[3]['date']+ " "+  geemails[3]['subject']+ " "+  geemails[3]['sender']+"<br />");
+	document.write(geemails[4]['date']+ " "+  geemails[4]['subject']+ " "+  geemails[4]['sender']+"<br />");
+	document.write(geemails[5]['date']+ " "+  geemails[5]['subject']+ " "+  geemails[5]['sender']+"<br />");
+	document.write(geemails[6]['date']+ " "+  geemails[6]['subject']+ " "+  geemails[6]['sender']+"<br />");
+	document.write(geemails[7]['date']+ " "+  geemails[7]['subject']+ " "+  geemails[7]['sender']+"<br />");
+	document.write(geemails[8]['date']+ " "+  geemails[8]['subject']+ " "+  geemails[8]['sender']+"<br />");
+	document.write(geemails[9]['date']+ " "+  geemails[9]['subject']+ " "+  geemails[9]['sender']+"<br />");
 
    	
-    		
     
     
     
@@ -58,5 +60,6 @@
 
 
 </script>
+</center>
 </body>
 </html>
