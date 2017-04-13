@@ -2,6 +2,14 @@
 	<head>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
+    
+<div class="notification-icon">
+	<span class="glyphicon glyphicon-envelope"></span>
+	<span class="badge">10</span>
+	</div>
+
+
+
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
@@ -22,12 +30,75 @@
 	<body>
 	<p><br/><br/><p>
 	<div class="container">
+	<table id="tableEmails">
+
 	<table class="table table-bordered table-striped table-hover">
 	<thead>
 	<tr>
-	<center><th>Date</th></center>
-	<center><th>Subject</th></center>
-	<center><th>Sender</th></center>
+	<th>Date</th>
+	<th>Subject</th>
+	<th>Sender</th>
+	<th>Content</th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[0]['date']); </script> </th>
+	<th><script> document.write(geemails[0]['subject']);</script></th>
+	<th><script> document.write(geemails[0]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[0]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[1]['date']); </script> </th>
+	<th><script> document.write(geemails[1]['subject']);</script></th>
+	<th><script> document.write(geemails[1]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[1]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[2]['date']); </script> </th>
+	<th><script> document.write(geemails[2]['subject']);</script></th>
+	<th><script> document.write(geemails[2]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[2]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[3]['date']); </script> </th>
+	<th><script> document.write(geemails[3]['subject']);</script></th>
+	<th><script> document.write(geemails[3]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[3]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[4]['date']); </script> </th>
+	<th><script> document.write(geemails[4]['subject']);</script></th>
+	<th><script> document.write(geemails[4]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[4]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[5]['date']); </script> </th>
+	<th><script> document.write(geemails[5]['subject']);</script></th>
+	<th><script> document.write(geemails[5]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[5]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[6]['date']); </script> </th>
+	<th><script> document.write(geemails[6]['subject']);</script></th>
+	<th><script> document.write(geemails[6]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[6]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[7]['date']); </script> </th>
+	<th><script> document.write(geemails[7]['subject']);</script></th>
+	<th><script> document.write(geemails[7]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[7]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[8]['date']); </script> </th>
+	<th><script> document.write(geemails[8]['subject']);</script></th>
+	<th><script> document.write(geemails[8]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[8]['body'])">Content</a></th>
+	</tr>
+	<tr>
+	<th style= "width: 5%px"><script> document.write(geemails[9]['date']); </script> </th>
+	<th><script> document.write(geemails[9]['subject']);</script></th>
+	<th><script> document.write(geemails[9]['sender']);</script></th>
+	<th><a href="#" onclick="javascript:alert(geemails[9]['body'])">Content</a></th>
 	</tr>
 	</thead>
 	<tbody></tbody>
@@ -35,35 +106,9 @@
 	</div>
 	
 	
-    
-    <script>
-   	document.write(geemails[0]['date']+ " "+  geemails[0]['subject']+ " "+  geemails[0]['sender']+" ");
-	</script><a href="#" onclick="javascript:alert(geemails[0]['body'])">Content</a>
-	</body>
-	<script>
-	document.write("<br />"+geemails[1]['date']+ " "+  geemails[1]['subject']+ " "+  geemails[1]['sender']+" ");
-	</script><a href="#" onclick="javascript:alert(geemails[1]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[2]['date']+ " "+  geemails[2]['subject']+ " "+  geemails[2]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[2]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[3]['date']+ " "+  geemails[3]['subject']+ " "+  geemails[3]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[3]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[4]['date']+ " "+  geemails[4]['subject']+ " "+  geemails[4]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[4]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[5]['date']+ " "+  geemails[5]['subject']+ " "+  geemails[5]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[5]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[6]['date']+ " "+  geemails[6]['subject']+ " "+  geemails[6]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[6]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[7]['date']+ " "+  geemails[7]['subject']+ " "+  geemails[7]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[7]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[8]['date']+ " "+  geemails[8]['subject']+ " "+  geemails[8]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[8]['body'])">Content</a>
-	<script>
-	document.write("<br />"+geemails[9]['date']+ " "+  geemails[9]['subject']+ " "+  geemails[9]['sender']+" ");</script><a href="#" onclick="javascript:alert(geemails[9]['body'])">Content</a>
-
- 
 
 
-<!-- <h6><a href="#" onclick="javascript:alert(geemails[0]['body'])">Click me</a></h6> -->
+
 
 
 
