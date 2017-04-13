@@ -17,7 +17,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
 	<script src="/js/my.js"></script>
-
+	
 	</head>
 	<body>
 	<p><br/><br/><p>
@@ -33,11 +33,15 @@
 	<tbody></tbody>
 	</table>
 	</div>
-	<p id="demo">Subject Message</p>
-	<center>
+	
+	
+    <center>
     <script>
-document.write(loadGeemails());
-};
+
+	
+
+	
+}
    
 	document.write(geemails[0]['date']+ " "+  geemails[0]['subject']+ " "+  geemails[0]['sender']+"<br />");
 	document.write(geemails[1]['date']+ " "+  geemails[1]['subject']+ " "+  geemails[1]['sender']+"<br />");
@@ -50,16 +54,15 @@ document.write(loadGeemails());
 	document.write(geemails[8]['date']+ " "+  geemails[8]['subject']+ " "+  geemails[8]['sender']+"<br />");
 	document.write(geemails[9]['date']+ " "+  geemails[9]['subject']+ " "+  geemails[9]['sender']+"<br />");
 
-   	
-    
-    
-    
-	
-
-
-
-
-</script>
+ </script>
 </center>
+<div>
+<p><a href="#" onclick="javascript:alert(geemails[0]['body'])">Click me</a></p>
+</div>
+
+
+
+
+
 </body>
 </html>
