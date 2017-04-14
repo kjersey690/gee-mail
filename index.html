@@ -7,7 +7,21 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-       
+       function CountRows() {
+		var totalRowCount= 0;
+		var rowCount= 0;
+		var table= table.getElementById("tableEmails");
+		var rows= table.getElementsByTagName("tr")
+		for(var i=0; i<rows.length; i++){
+			totalRowCount++;
+			if(rows[i].getElementsByTagName("td").length>0){
+				rowCount++;
+			}
+		}
+	var message="Total Row Count: " +totalRowCount;
+	message+= "\nRow Count: " + rowCount;
+alert(message);
+}
 
 }
 
@@ -94,30 +108,38 @@
 	<td><a href="#" onclick="javascript:alert(geemails[9]['body'])">Content</a></td>
 	</tr>
 	</thead>
-	<tbody></tbody>
+	
 	</table>
 	</div>
+	<input type="button" id="brnGetCount" value="Count Rows" />
+	<script type ="text/javascript" src= "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type= "text/javascript">
+	$(function () {
+		$("#btnGetCount").click(function() {
+			var totalRowCount = $("#tableEmails tr").length;
+			var rowCount= $("#tableEmails td").closest("tr").length;
+			var message="Total Row Count: " +totalRowCount;
+			message+="\nRow Count: "+ rowCount;
+			alert(message);
+			});
+		});-->
+
+	<script>
 	
-	<input type="button" id="btnGetCount" value="Count Rows" onclick= "CountRows()"/>
-	<script type="text/javascript">
-	function CountRows(){
-		var totalRowCount= 0;
-		var rowCount= 0;
-		var table=document.getElementById("tableEmails");
-		var rows=table.getELementsByTagName("tr");
-		for(var i=0; i<rows.length; i++){
-			return totalRowCount++;
-			if(rows[i].getELementsByTagName("td").length>0){
+function getNewMessage(){
+ var message = {};
+    message.date = date || getRandomDate();
+    message.subject = getRandomElement(subject);
+    message.sender = getRandomElement(sender);
+    message.body = getRandomElement(body);
+    return message;
+}
 
-				return rowCount++;
-		}
-	}
-
-var message="Inbox: "+totalRowCount;
-message+="\nRow Count: "+ rowCount;
-alert(CountRows());
+	loadGeeMails
 
 
+		
+	
 
 
 
