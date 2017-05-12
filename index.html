@@ -48,11 +48,15 @@ alert(message);
 	<th>Content</th>
 	</tr>
 	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[0]['date']); </script></td>
-	<td><script> document.write(geemails[0]['subject']);</script></td>
-	<td><script> document.write(geemails[0]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[0]['body'])">Content</a></td>
-	</tr>
+	<td style= "width: 5%px"><script> for(i=0; i<geemails.length; i++){
+
+		 document.write(geemails[i]['date']+ "<br />"); }</script></td>
+		 
+	<td><script> for(j=0; j<geemails.length; j++){document.write(geemails[j]['subject'] + "<br />");}</script></td>
+	<td><script> for(k=0; k<geemails.length; k++){document.write(geemails[k]['sender']+ "<br />");} </script></td>
+	
+	<td><a href="#" onclick="javascript:alert(geemails[l]['body'])">Content</a></td>
+	
 	<tr>
 	<td style= "width: 5%px"><script> document.write(geemails[1]['date']); </script> </td>
 	<td><script> document.write(geemails[1]['subject']);</script></td>
