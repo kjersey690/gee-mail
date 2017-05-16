@@ -1,145 +1,37 @@
 <html>
 	<head>
-		<script src="js/mail-generator.js"></script>
+	</head>
+	<body>
+
+		
 		<link href="css/style.css" rel="stylesheet" media="screen">
+     
     
     <script>
       window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-       function CountRows() {
-		var totalRowCount= 0;
-		var rowCount= 0;
-		var table= table.getElementById("tableEmails");
-		var rows= table.getElementsByTagName("tr")
-		for(var i=0; i<rows.length; i++){
-			totalRowCount++;
-			if(rows[i].getElementsByTagName("td").length>0){
-				rowCount++;
-			}
-		}
-	var message="Total Row Count: " +totalRowCount;
-	message+= "\nRow Count: " + rowCount;
-alert(message);
+      	    // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
+        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser 
 }
+       
+document.write(var geemails[0]['sender']);
 
-}
 
     </script>
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Jquery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
-	<script src="/js/my.js"></script>
+   
+   </body>
+   
+  
+   
 	
-	</head>
-	<body>
-	<p><br/><br/><p>
-	<div class="container">
-	<table id="tableEmails" cellpadding="0">
+	
+	
+	
+	
+	
+	
+	
+	
 
-	<table class="table table-bordered table-striped table-hover">
-	<thead>
-	<tr>
-	<th>Date</th>
-	<th>Subject</th>
-	<th>Sender</th>
-	<th>Content</th>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> for(i=0; i<geemails.length; i++){
-
-		 document.write(geemails[i]['date']+ "<br />"); }</script></td>
-		 
-	<td><script> for(j=0; j<geemails.length; j++){document.write(geemails[j]['subject'] + "<br />");}</script></td>
-	<td><script> for(k=0; k<geemails.length; k++){document.write(geemails[k]['sender']+ "<br />");} </script></td>
-	
-	<td><a href="#" onclick="javascript:alert(geemails[l]['body'])">Content</a></td>
-	
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[1]['date']); </script> </td>
-	<td><script> document.write(geemails[1]['subject']);</script></td>
-	<td><script> document.write(geemails[1]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[1]['body'])">Content</a></th>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[2]['date']); </script> </td>
-	<td><script> document.write(geemails[2]['subject']);</script></td>
-	<td><script> document.write(geemails[2]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[2]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[3]['date']); </script> </td>
-	<td><script> document.write(geemails[3]['subject']);</script></td>
-	<td><script> document.write(geemails[3]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[3]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[4]['date']); </script> </td>
-	<td><script> document.write(geemails[4]['subject']);</script></td>
-	<td><script> document.write(geemails[4]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[4]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[5]['date']); </script> </td>
-	<td><script> document.write(geemails[5]['subject']);</script></td>
-	<td><script> document.write(geemails[5]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[5]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[6]['date']); </script> </td>
-	<td><script> document.write(geemails[6]['subject']);</script></td>
-	<td><script> document.write(geemails[6]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[6]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[7]['date']); </script> </td>
-	<td><script> document.write(geemails[7]['subject']);</script></td>
-	<td><script> document.write(geemails[7]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[7]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[8]['date']); </script> </td>
-	<td><script> document.write(geemails[8]['subject']);</script></td>
-	<td><script> document.write(geemails[8]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[8]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[9]['date']); </script> </td>
-	<td><script> document.write(geemails[9]['subject']);</script></td>
-	<td><script> document.write(geemails[9]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[9]['body'])">Content</a></td>
-	</tr>
-	</thead>
-	
-	</table>
-	</div>
-	<input type="button" id="brnGetCount" value="Count Rows" />
-	<script type ="text/javascript" src= "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script type= "text/javascript">
-	$(function () {
-		$("#btnGetCount").click(function() {
-			var totalRowCount = $("#tableEmails tr").length;
-			var rowCount= $("#tableEmails td").closest("tr").length;
-			var message="Total Row Count: " +totalRowCount;
-			message+="\nRow Count: "+ rowCount;
-			alert(message);
-			});
-		});-->
-
-	<script>
-	
-function getNewMessage(){
- var message = {};
-    message.date = date || getRandomDate();
-    message.subject = getRandomElement(subject);
-    message.sender = getRandomElement(sender);
-    message.body = getRandomElement(body);
-    return message;
-}
-
-	loadGeeMails
 
 
 		
@@ -149,6 +41,5 @@ function getNewMessage(){
 
 
 
-</script>
 
 </html>
