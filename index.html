@@ -1,20 +1,89 @@
-<html>
+<!DOCTYPE html>
+
 	<head>
+	
+	<style> table, th{
+		border: 1px solid black;
+	}
+	</style>
 	</head>
 	<body>
+	<p>Email Generator</p>
+
+	<table id="myTable">
+	<tr>
+	<th id="email" colspan="10">Email Generator</th>
+	</tr>
+	<tr>
+	<th id="myTh" headers="Date" colspan="3">Date</th>
+	<th id="myTh1" headers="Subject" colspan="3">Subject</th>
+	<th id="myTh2" headers="Sender" colspan="3">Sender</th>
+	</tr>
+	<tr>
+	<th id="first row" headers="date" colspan="3">Row</th>
+	<th id="second row" headers="date" colspan="3">Row</th>
+	<th id="third row" headers="date" colspan="3">Row</th>
+	</tr>
+
+	</table>
+	<br>
+
+
+
+	</tr>
+
+
+	
 
 		
-		<link href="css/style.css" rel="stylesheet" media="screen">
-     
+
+		
+
+	<script type="text/JavaScript" src="js/mail-generator.js"></script>
+			<link href="css/style.css" rel="stylesheet" media="screen">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     
     <script>
-      window.onload = function(){
+    window.onload = function(){
+    	for(var i=0, row; row=i<geemails.length; i++){
+    		var nameElem=document.getElementById("first row");
+    		var k=document.createElement("tr");
+    		nameElem.innerHTML=geemails[i].date;
+    		nameElem.appendChild(k);
+    		
+    // var table=document.getElementById("myTable");
+   //for(var i=0, row; row=table.rows[i]; i++){
+		
+    		
+    	var nameElem1=document.getElementById("second row");
+    	var l=document.createElement("tr");
+    	nameElem1.innerHTML=geemails[i].subject;
+    	nameElem1.appendChild(l);
+   
+   		var nameElem2=document.getElementById("third row");
+   		var m=document.createElement("tr");
+   		nameElem2.innerHTML=geemails[i].sender;
+   		nameElem2.appendChild(m);
+
+
+
+   
+    
+    
+}
+}
+
+
+      
+
+
+      	
       	    // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser 
-}
-       
-document.write(var geemails[0]['sender']);
 
+ 
+    
 
     </script>
    
