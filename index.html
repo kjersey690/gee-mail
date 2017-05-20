@@ -25,7 +25,7 @@
 
 	
 
-		
+	<button id="myBtn" onclick="javascript: alert(table.rows.length)">Inbox Count</button>	
 
 		
 
@@ -75,6 +75,8 @@
 
 
     		
+
+            
     		
     		
     		row0.innerHTML=geemails[0].date +" "+ geemails[0].subject+ " "+ geemails[0].sender;
@@ -128,9 +130,16 @@ function createMessage(){
 function myStopFunction(){
 	clearInterval(setInterval);
 
-	}	
 }
-	}
+}
+
+var x=createElement("BUTTON");
+x.innerHTML=alert(myTable.rows.length);
+x.appendChild;
+	
+    }	
+
+	
 
     	
 		//var cell0=document.getElementById("myTh");
