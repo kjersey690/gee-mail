@@ -8,25 +8,15 @@
 	</style>
 	</head>
 	<body>
-	<p>Email Generator</p>
+	
 
 	<table id="myTable">
 	<tr>
-	<th id="email" colspan="10">Email Generator</th>
-	</tr>
-	<tr>
-	<th id="myTh" headers="Date" colspan="3">Date</th>
-	<th id="myTh1" headers="Subject" colspan="3">Subject</th>
-	<th id="myTh2" headers="Sender" colspan="3">Sender</th>
-	</tr>
-	<tr>
-	<th id="first row" headers="date" colspan="3">Row</th>
-	<th id="second row" headers="date" colspan="3">Row</th>
-	<th id="third row" headers="date" colspan="3">Row</th>
-	</tr>
-
+	<th id="Date" colspan="3">Date</th>
+	<th id="Subject" colspan="3">Subject</th>
+	<th id="Sender" colspan="3">Sender</th>
+		</tr>
 	</table>
-	<br>
 
 
 
@@ -39,43 +29,141 @@
 
 		
 
-	<script type="text/JavaScript" src="js/mail-generator.js"></script>
+	<script type="text/JavaScript" src="js/mail-generator.js">
+
+
+
+		
+
+	</script>
 			<link href="css/style.css" rel="stylesheet" media="screen">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     
     <script>
     window.onload = function(){
-    	for(var i=0, row; row=i<geemails.length; i++){
-    		var nameElem=document.getElementById("first row");
-    		var k=document.createElement("tr");
-    		nameElem.innerHTML=geemails[i].date;
-    		nameElem.appendChild(k);
+    	//for(var i=0; i<geemails.length; i++){
+    	//	var nameElem=document.getElementById("first row");
+    	//	var k=document.createElement("tr");
+    	//	nameElem.innerHTML=geemails[i].date;
+    	//	nameElem.appendChild(k);
     		
     // var table=document.getElementById("myTable");
    //for(var i=0, row; row=table.rows[i]; i++){
 		
+		for(var i=0; i<1; i++){
+			
+			var table = document.getElementById("myTable");
+    		var row0= myTable.insertRow(-1)
+    		var row1=myTable.insertRow()
+    		var row2=myTable.insertRow()
+    		var row3=myTable.insertRow()
+    		var row4=myTable.insertRow()
+    		var row5=myTable.insertRow()
+    		var row6=myTable.insertRow()
+    		var row7=myTable.insertRow()
+    		var row8=myTable.insertRow()
+    		var row9=myTable.insertRow()
+    		var row10=myTable.insertRow()
+    		var row11=myTable.insertRow()
     		
-    	var nameElem1=document.getElementById("second row");
-    	var l=document.createElement("tr");
-    	nameElem1.innerHTML=geemails[i].subject;
-    	nameElem1.appendChild(l);
-   
-   		var nameElem2=document.getElementById("third row");
-   		var m=document.createElement("tr");
-   		nameElem2.innerHTML=geemails[i].sender;
-   		nameElem2.appendChild(m);
+    		
+    	//var row=document.createElement("th");
+    	//var row.innerHTML="Date"+ "Subject"+ "Sender";
 
 
 
-   
-    
-    
+
+    		
+    		
+    		
+    		row0.innerHTML=geemails[0].date +" "+ geemails[0].subject+ " "+ geemails[0].sender;
+    		row1.innerHTML=geemails[1].date +" "+ geemails[1].subject+ " "+ geemails[1].sender;
+    		row2.innerHTML=geemails[2].date +" "+ geemails[2].subject+ " "+ geemails[2].sender;
+    		row3.innerHTML=geemails[3].date +" "+ geemails[3].subject+ " "+ geemails[3].sender;
+    		row4.innerHTML=geemails[4].date +" "+ geemails[4].subject+ " "+ geemails[4].sender;
+    		row5.innerHTML=geemails[5].date +" "+ geemails[5].subject+ " "+ geemails[5].sender;
+    		row6.innerHTML=geemails[6].date +" "+ geemails[6].subject+ " "+ geemails[6].sender;
+    		row7.innerHTML=geemails[7].date +" "+ geemails[7].subject+ " "+ geemails[7].sender;
+    		row8.innerHTML=geemails[8].date +" "+ geemails[8].subject+ " "+ geemails[8].sender;
+    		row9.innerHTML=geemails[9].date +" "+ geemails[9].subject+ " "+ geemails[9].sender;
+    		row10.innerHTML=getNewMessage().date+" "+getNewMessage().subject+" "+ getNewMessage().sender;
+    		//cell1.innerHTML=geemails[i].date;
+    		//cell2.innerHTML=geemails[i].subject;
+    		//cell3.innerHTML=geemails[i].sender;
+    		
+row0.addEventListener("click", function(){alert(geemails[0].body)});
+row1.addEventListener("click", function(){alert(geemails[1].body)});
+row2.addEventListener("click", function(){alert(geemails[2].body)});
+row3.addEventListener("click", function(){alert(geemails[3].body)});
+row4.addEventListener("click", function(){alert(geemails[4].body)});
+row5.addEventListener("click", function(){alert(geemails[5].body)});
+row6.addEventListener("click", function(){alert(geemails[6].body)});
+row7.addEventListener("click", function(){alert(geemails[7].body)});
+row8.addEventListener("click", function(){alert(geemails[8].body)});
+row9.addEventListener("click", function(){alert(geemails[9].body)});
+row10.addEventListener("click",function(){alert(getNewMessage().body)});
+    		
+
+
+	
+		//var row11=myTable.insertRow(-1);
+		//var row11.innerHTML= getNewMessage().date+" "+getNewMessage().subject+" "+ getNewMessage().sender;
+		//row11.addEventListener("click", function(){alert(getNewMessage().body)});
+	
 }
+
+setInterval(createMessage, 5000);
+
+
+
+
+
+function createMessage(){
+	row11.innerHTML=getNewMessage().date +" "+ getNewMessage().subject+ " "+ getNewMessage().sender;
+	row11.addEventListener("click",function(){alert(getNewMessage().body)});
+
+
+
+function myStopFunction(){
+	clearInterval(setInterval);
+
+	}	
 }
+	}
+
+    	
+		//var cell0=document.getElementById("myTh");
+    		//var cell0.innerHTML="Date";
+
+    		
+    	//var nameElem1=document.getElementById("second row");
+    	//var l=document.createElement("tr");
+    	//nameElem1.innerHTML=geemails[i].subject;
+    	//nameElem1.appendChild(l);
+   
+   		//var nameElem2=document.getElementById("third row");
+   		//var m=document.createElement("tr");
+   		//nameElem2.innerHTML=geemails[i].sender;
+   		//nameElem2.appendChild(m);
 
 
-      
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
 
 
       	
@@ -83,32 +171,6 @@
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser 
 
  
-    
+   
 
     </script>
-   
-   </body>
-   
-  
-   
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-		
-	
-
-
-
-
-
-
-</html>
