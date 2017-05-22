@@ -1,150 +1,195 @@
-<html>
+<!DOCTYPE html>
+
 	<head>
-		<script src="js/mail-generator.js"></script>
-		<link href="css/style.css" rel="stylesheet" media="screen">
-    
-    <script>
-      window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-       function CountRows() {
-		var totalRowCount= 0;
-		var rowCount= 0;
-		var table= table.getElementById("tableEmails");
-		var rows= table.getElementsByTagName("tr")
-		for(var i=0; i<rows.length; i++){
-			totalRowCount++;
-			if(rows[i].getElementsByTagName("td").length>0){
-				rowCount++;
-			}
-		}
-	var message="Total Row Count: " +totalRowCount;
-	message+= "\nRow Count: " + rowCount;
-alert(message);
-}
-
-}
-
-    </script>
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Jquery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
-	<script src="/js/my.js"></script>
 	
+	<style> table, th{
+		border: 1px solid black;
+	}
+	</style>
 	</head>
 	<body>
-	<p><br/><br/><p>
-	<div class="container">
-	<table id="tableEmails" cellpadding="0">
-
-	<table class="table table-bordered table-striped table-hover">
-	<thead>
-	<tr>
-	<th>Date</th>
-	<th>Subject</th>
-	<th>Sender</th>
-	<th>Content</th>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[0]['date']); </script></td>
-	<td><script> document.write(geemails[0]['subject']);</script></td>
-	<td><script> document.write(geemails[0]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[0]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[1]['date']); </script> </td>
-	<td><script> document.write(geemails[1]['subject']);</script></td>
-	<td><script> document.write(geemails[1]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[1]['body'])">Content</a></th>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[2]['date']); </script> </td>
-	<td><script> document.write(geemails[2]['subject']);</script></td>
-	<td><script> document.write(geemails[2]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[2]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[3]['date']); </script> </td>
-	<td><script> document.write(geemails[3]['subject']);</script></td>
-	<td><script> document.write(geemails[3]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[3]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[4]['date']); </script> </td>
-	<td><script> document.write(geemails[4]['subject']);</script></td>
-	<td><script> document.write(geemails[4]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[4]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[5]['date']); </script> </td>
-	<td><script> document.write(geemails[5]['subject']);</script></td>
-	<td><script> document.write(geemails[5]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[5]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[6]['date']); </script> </td>
-	<td><script> document.write(geemails[6]['subject']);</script></td>
-	<td><script> document.write(geemails[6]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[6]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[7]['date']); </script> </td>
-	<td><script> document.write(geemails[7]['subject']);</script></td>
-	<td><script> document.write(geemails[7]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[7]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[8]['date']); </script> </td>
-	<td><script> document.write(geemails[8]['subject']);</script></td>
-	<td><script> document.write(geemails[8]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[8]['body'])">Content</a></td>
-	</tr>
-	<tr>
-	<td style= "width: 5%px"><script> document.write(geemails[9]['date']); </script> </td>
-	<td><script> document.write(geemails[9]['subject']);</script></td>
-	<td><script> document.write(geemails[9]['sender']);</script></td>
-	<td><a href="#" onclick="javascript:alert(geemails[9]['body'])">Content</a></td>
-	</tr>
-	</thead>
 	
+    <span id="number">Inbox[10]</span>
+	<table id="myTable">
+	<tr>
+	<th id="Date" colspan="3">Date</th>
+	<th id="Subject" colspan="3">Subject</th>
+	<th id="Sender" colspan="3">Sender</th>
+		</tr>
 	</table>
-	</div>
-	<input type="button" id="brnGetCount" value="Count Rows" />
-	<script type ="text/javascript" src= "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script type= "text/javascript">
-	$(function () {
-		$("#btnGetCount").click(function() {
-			var totalRowCount = $("#tableEmails tr").length;
-			var rowCount= $("#tableEmails td").closest("tr").length;
-			var message="Total Row Count: " +totalRowCount;
-			message+="\nRow Count: "+ rowCount;
-			alert(message);
-			});
-		});-->
 
-	<script>
+
+
+	</tr>
+
+
 	
-function getNewMessage(){
- var message = {};
-    message.date = date || getRandomDate();
-    message.subject = getRandomElement(subject);
-    message.sender = getRandomElement(sender);
-    message.body = getRandomElement(body);
-    return message;
-}
 
-	loadGeeMails
+	
+		
+
+	<script type="text/JavaScript" src="js/mail-generator.js">
+
 
 
 		
+
+	</script>
+			<link href="css/style.css" rel="stylesheet" media="screen">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    <script>
+    window.onload = function(){
+    	//for(var i=0; i<geemails.length; i++){
+    	//	var nameElem=document.getElementById("first row");
+    	//	var k=document.createElement("tr");
+    	//	nameElem.innerHTML=geemails[i].date;
+    	//	nameElem.appendChild(k);
+    		
+    // var table=document.getElementById("myTable");
+   //for(var i=0, row; row=table.rows[i]; i++){
+		
+		for(var i=0; i<1; i++){
+			
+			var table = document.getElementById("myTable");
+    		var row0= myTable.insertRow(-1)
+    		var row1=myTable.insertRow()
+    		var row2=myTable.insertRow()
+    		var row3=myTable.insertRow()
+    		var row4=myTable.insertRow()
+    		var row5=myTable.insertRow()
+    		var row6=myTable.insertRow()
+    		var row7=myTable.insertRow()
+    		var row8=myTable.insertRow()
+    		var row9=myTable.insertRow()
+    		var row10=myTable.insertRow()
+    		var row11=myTable.insertRow()
+    		
+    		
+    	//var row=document.createElement("th");
+    	//var row.innerHTML="Date"+ "Subject"+ "Sender";
+
+
+
+
+    	
+
+            
+    		
+    		
+    		row0.innerHTML=geemails[0].date +" "+ geemails[0].subject+ " "+ geemails[0].sender;
+    		row1.innerHTML=geemails[1].date +" "+ geemails[1].subject+ " "+ geemails[1].sender;
+    		row2.innerHTML=geemails[2].date +" "+ geemails[2].subject+ " "+ geemails[2].sender;
+    		row3.innerHTML=geemails[3].date +" "+ geemails[3].subject+ " "+ geemails[3].sender;
+    		row4.innerHTML=geemails[4].date +" "+ geemails[4].subject+ " "+ geemails[4].sender;
+    		row5.innerHTML=geemails[5].date +" "+ geemails[5].subject+ " "+ geemails[5].sender;
+    		row6.innerHTML=geemails[6].date +" "+ geemails[6].subject+ " "+ geemails[6].sender;
+    		row7.innerHTML=geemails[7].date +" "+ geemails[7].subject+ " "+ geemails[7].sender;
+    		row8.innerHTML=geemails[8].date +" "+ geemails[8].subject+ " "+ geemails[8].sender;
+    		row9.innerHTML=geemails[9].date +" "+ geemails[9].subject+ " "+ geemails[9].sender;
+    		row10.innerHTML=getNewMessage().date+" "+getNewMessage().subject+" "+ getNewMessage().sender;
+    		//cell1.innerHTML=geemails[i].date;
+    		//cell2.innerHTML=geemails[i].subject;
+    		//cell3.innerHTML=geemails[i].sender;
+    		
+row0.addEventListener("click", function(){alert(geemails[0].body)});
+row1.addEventListener("click", function(){alert(geemails[1].body)});
+row2.addEventListener("click", function(){alert(geemails[2].body)});
+row3.addEventListener("click", function(){alert(geemails[3].body)});
+row4.addEventListener("click", function(){alert(geemails[4].body)});
+row5.addEventListener("click", function(){alert(geemails[5].body)});
+row6.addEventListener("click", function(){alert(geemails[6].body)});
+row7.addEventListener("click", function(){alert(geemails[7].body)});
+row8.addEventListener("click", function(){alert(geemails[8].body)});
+row9.addEventListener("click", function(){alert(geemails[9].body)});
+row10.addEventListener("click",function(){alert(getNewMessage().body)});
+    		
+
+
 	
+		//var row11=myTable.insertRow(-1);
+		//var row11.innerHTML= getNewMessage().date+" "+getNewMessage().subject+" "+ getNewMessage().sender;
+		//row11.addEventListener("click", function(){alert(getNewMessage().body)});
+	
+}
+
+setInterval(createMessage, 5000);
+//setInterval(function() {
+   // updateTime(createMessage);
+//},1000);
 
 
 
 
 
-</script>
+function createMessage(){
+	row11=myTable.insertRow()
+    row11.innerHTML=getNewMessage().date +" "+ getNewMessage().subject+ " "+ getNewMessage().sender;
+	row11.addEventListener("click",function(){alert(getNewMessage().body, true)});
+    
+    }
 
-</html>
+
+
+
+
+function myStopFunction(){
+	clearInterval(setInterval);
+
+}
+}
+
+
+   var i = 10;
+    function increment() {
+        i++;
+        document.getElementById('number').innerHTML ="Inbox"+"["+i+"]";
+    }
+    setInterval('increment()', 5000);
+ 	
+
+
+
+    	
+		//var cell0=document.getElementById("myTh");
+    		//var cell0.innerHTML="Date";
+
+    		
+    	//var nameElem1=document.getElementById("second row");
+    	//var l=document.createElement("tr");
+    	//nameElem1.innerHTML=geemails[i].subject;
+    	//nameElem1.appendChild(l);
+   
+   		//var nameElem2=document.getElementById("third row");
+   		//var m=document.createElement("tr");
+   		//nameElem2.innerHTML=geemails[i].sender;
+   		//nameElem2.appendChild(m);
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      	
+      	    // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
+        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser 
+
+ 
+   
+
+    </script>
