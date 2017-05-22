@@ -25,8 +25,7 @@
 
 	
 
-	<button id="myBtn" onclick="javascript: alert(table.rows.length)">Inbox Count</button>	
-
+	<span id="number">Inbox[10]</span>
 		
 
 	<script type="text/JavaScript" src="js/mail-generator.js">
@@ -74,7 +73,7 @@
 
 
 
-    		
+    	
 
             
     		
@@ -116,14 +115,22 @@ row10.addEventListener("click",function(){alert(getNewMessage().body)});
 }
 
 setInterval(createMessage, 5000);
+//setInterval(function() {
+   // updateTime(createMessage);
+//},1000);
 
 
 
 
 
 function createMessage(){
-	row11.innerHTML=getNewMessage().date +" "+ getNewMessage().subject+ " "+ getNewMessage().sender;
-	row11.addEventListener("click",function(){alert(getNewMessage().body)});
+	row11=myTable.insertRow()
+    row11.innerHTML=getNewMessage().date +" "+ getNewMessage().subject+ " "+ getNewMessage().sender;
+	row11.addEventListener("click",function(){alert(getNewMessage().body, true)});
+    
+    }
+
+
 
 
 
@@ -133,13 +140,16 @@ function myStopFunction(){
 }
 }
 
-var x=createElement("BUTTON");
-x.innerHTML=alert(myTable.rows.length);
-x.appendChild;
-	
-    }	
 
-	
+   var i = 10;
+    function increment() {
+        i++;
+        document.getElementById('number').innerHTML ="Inbox"+"["+i+"]";
+    }
+    setInterval('increment()', 5000);
+ 	
+
+
 
     	
 		//var cell0=document.getElementById("myTh");
